@@ -2,7 +2,7 @@ import os
 
 
 def convert(source, output):
-    cmd = 'ffmpeg -i "{0}" -c copy "{1}"'.format(source, output)
+    cmd = 'ffmpeg -i "{0}" -c copy -strict -2 "{1}"'.format(source, output)
     c = os.system(cmd)
     return c
 
